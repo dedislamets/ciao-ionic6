@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-title style="color:#fff;">Camera Preview</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end"  (click)="dismiss()">
+      <span ion-text style=color:#fff>Cancel</span>
+    </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content style=" background-color: transparent;">
+  <div [ngClass]="{'muka' : source == 2 }"></div>
+  <!-- <div  class="rect_class_selfie_2" ></div> -->
+  <div  [ngClass]="{'rect_class' : source == 1, 'rect_class_selfie' : source == 2 }" id="rect_class"></div>
+
+  <p  [ngStyle]="{'display': source == 1 ? 'block' : 'none'}" class="posisi">Posisikan KTP di dalam bingkai,<br/> pastikan informasi di foto terlihat jelas</p>
+  <p  [ngStyle]="{'display': source == 2 ? 'block' : 'none'}" class="posisi_2">Pastikan wajah Anda dan KTP berada dalam area panduan.</p>
+  <img src="./assets/images/btn_icon_mini.png" (click)="takePicture()" class="btn_class take_pic_class">
+</ion-content>

@@ -1,0 +1,40 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+          <ion-buttons slot="start">
+            <!-- <ion-back-button></ion-back-button> -->
+            <ion-icon (click)="goBack()" slot="start" name="arrow-back-outline"></ion-icon>
+          </ion-buttons>
+          <ion-buttons slot="end">
+              <img src="../../assets/images/logo-home.jpg" width="121" style="padding-top: 10px"/>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <div class="box Efek2" >
+      <div id="copy-html" style="padding: 10px;background-color: #fff;">
+        <div [innerHTML]="konten" ></div>
+        <div style="margin-bottom: 20px;">
+          <div class="tanggal" ></div>
+          <p style="padding-top: 0;margin-top: 0;">Tanda Tangan</p>
+          <div style="background-color: #fff;" (click)="openSignatureModel()">
+            <div class="pad-sign" *ngIf="signatureImage =='./assets/images/signhere.png' ">
+              <h1 class="text-sign">Klik disini untuk tanda tangan</h1>
+            </div>
+            <img *ngIf="signatureImage !='./assets/images/signhere.png' " style="width: 100%;" [src]="signatureImage" />
+          </div>
+          <div class="ttd" ></div>
+          <!-- <div class="no-save">
+            <signature-pad [options]="signaturePadOptions"  id="signatureCanvas"></signature-pad>
+            <button ion-button style="position: absolute;bottom: 292px;right: 28px;" color="light" (click)="drawClear()">Kosongkan</button>
+          </div> -->
+        </div>
+      </div>
+      <ion-button item-end block color="warning" (click)="submit()" class="btn-more-submit">
+        Simpan
+      </ion-button>
+    </div>
+  </ion-content>
+</div>
+

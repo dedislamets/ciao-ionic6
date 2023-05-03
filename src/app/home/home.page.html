@@ -1,0 +1,40 @@
+<app-menu autoHide="false"></app-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+          <!-- <button ion-button icon-only >
+            <ion-icon name="menu" style="padding-top: 10px;" color="warning"></ion-icon>
+          </button> -->
+          <ion-buttons slot="start">
+            <ion-menu-button color="warning"></ion-menu-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+              <img src="../../assets/images/logo-home.png" width="121" style="padding-top: 10px"/>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <!-- <button ion-button block color="danger" (click)="logout()" *ngIf="userProfile">
+      <ion-icon name="logo-googleplus"></ion-icon>
+      Logout with Google
+    </button> --> 
+    <h3 *ngIf="userProfile" style="font-size: 12px;text-align: center;padding: 10px;margin-bottom: 0;font-weight: 300;">{{label_welcome}}</h3>
+    <h2 *ngIf="userProfile" style="font-size: 20px;text-align: center;margin: 0;line-height: 0.4;">{{userProfile}}</h2>
+    <div style="padding: 16px">
+      <div class="row" style="margin-top: 10px">
+        <img (click)="register()" full src="../../assets/images/REGISTRATION.png" style="margin-bottom: 5px;height: 100%; width: 100%;" />
+        <img (click)="experience()" full src="../../assets/images/EXPERIENCE.png" style="margin-bottom: 5px;height: 100%;width: 100%;" />
+        <img (click)="news()" full src="../../assets/images/LATEST NEWS.png" style="margin-bottom: 5px;height: 100%;width: 100%;" />
+        <img (click)="service()" full src="../../assets/images/services.png" style="margin-bottom: 5px;height: 100%;width: 100%;" />
+        <img (click)="promo()" full src="../../assets/images/promotion.png" style="margin-bottom: 5px;height: 100%;width: 100%;" />
+        <img (click)="onlineshop()" full src="../../assets/images/ONLINE SHOPPING.png" style="margin-bottom: 5px;height: 100%;width: 100%;" />
+      </div>
+    
+      <app-footer></app-footer>
+      
+    </div>
+    <div style="padding: 10px;background-color: #faa61a"></div>
+  </ion-content>
+</div>
+

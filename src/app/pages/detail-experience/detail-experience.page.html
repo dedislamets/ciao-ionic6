@@ -1,0 +1,137 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+          <ion-buttons slot="start" class="kembali">
+            <ion-icon (click)="goBack()" slot="start" name="arrow-back-outline"></ion-icon>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <img src="../../assets/images/logo-home.png" width="121" style="padding-top: 10px"/>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-row>
+      <ion-col size="12" style="padding: 0;">
+        <img src="{{arrList.class_thumbnail}}" />
+        <div class="overlay overlay_2">
+          <div class="banner">
+            <h1 class="h1-header">{{arrList.class_name}}</h1>
+            <p class="p-sub-header">Baking Course With {{arrList.chef_name}}</p>
+            <br>
+            <p class="p-sub-header-bottom">Exclusive for {{arrList.class_max_person}} person only.</p>
+          </div>
+        </div> 
+      </ion-col>
+    </ion-row>
+    
+    <div style="padding: 10px">
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col [ngClass]="{'col-tabs-active' : tabs == 'chef', 'col-tabs' : tabs !== 'chef' }" (click)="goChef()">Chef</ion-col>
+          <ion-col [ngClass]="{'col-tabs-active' : tabs == 'about', 'col-tabs' : tabs !== 'about' }" (click)="goAbout()">About</ion-col>
+          <ion-col [ngClass]="{'col-tabs-active' : tabs == 'date', 'col-tabs' : tabs !== 'date' }" (click)="goDate()">Date & Time</ion-col>
+          <!-- <ion-col class="col-tabs" (click)="goCourse()">Another Course</ion-col> -->
+        </ion-row>
+      </ion-grid>
+      
+      <div *ngIf="tabs == 'chef'">
+        
+        <ion-grid>
+          <ion-row>
+            <!-- <ion-col size="3"><img src="{{arrList.chef_photo}}" ></ion-col> -->
+            <ion-col size="6">
+              <h1 class="h1-sub-title">{{arrList.chef_name}}</h1>
+              <div class="tag-spesialis">{{arrList.chef_speciality}}</div>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+        <p class="col-p" [innerHTML]="arrList.chef_description"></p>
+      </div>
+      <div *ngIf="tabs == 'about'">
+        <h1 class="h1-sub-title">About The Class</h1>
+        <p class="col-p" [innerHTML]="arrList.class_description"></p>
+      </div>
+      <div *ngIf="tabs == 'date'">
+        <h1 class="h1-sub-title-event">Date & Time</h1>
+        <div class="row">
+          <ion-grid class="ion-no-padding">
+            <ion-row class="ion-no-padding">
+              <ion-col size="7">
+                <div class="d-flex">
+                  <ion-icon  slot="start" name="calendar-outline"></ion-icon>
+                  &nbsp;{{arrList.class_date}}
+                </div>
+              </ion-col>
+              <ion-col size="5" class="ion-padding-bottom">
+                <div class="d-flex">
+                  <ion-icon slot="start" name="calendar-outline"></ion-icon>&nbsp;
+                  <div class="pr-2">
+                      {{arrList.class_start_time}} - {{arrList.class_end_time}}
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size="12">
+                <div class="d-flex">
+                  <div class="pr-2 align-self-start">
+                    <ion-icon slot="start" name="business-outline"></ion-icon>
+                  </div>
+                  <div class="pr-2">
+                    {{arrList.class_address}}
+                    <br />
+                    <a class="btn btn-link text-info p-0 pl-1" href="{{arrList.class_address_link}}" target="_blank">
+                          go to maps <i class="fi-rr-arrow-small-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <div class="col-12 col-lg-6 ion-padding-top" >
+            <div class="row">
+              <div class="col-12">
+                  <div class="d-block text-sm">
+                    <ion-row class="ion-no-padding">
+                      <ion-col size="4">
+                        <div class="d-flex">
+                          Ticket Price
+                        </div>
+                      </ion-col>
+                      <ion-col size="8">
+                        <div class="d-flex">
+                          <div class="ticket-price-discount mb-2">
+                            <del>
+                                Rp {{arrList.class_price.toLocaleString('en-US')}}
+                            </del>
+                        </div>
+                        </div>
+                      </ion-col>
+                      <ion-col size="4">
+                        <div class="d-flex"></div>
+                      </ion-col>
+                      <ion-col size="8">
+                        <div class="d-flex">
+                          <div class="ticket-price-section pr-3 pr-md-0">
+                            <span class="ticket-price c-gradient-blue">
+                                Rp {{arrList.class_price_after_discount.toLocaleString('en-US')}}
+                            </span>
+                            <span class="ticket-price-person">/Orang</span>
+                          </div>  
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <p style="margin-bottom: 0;">Untuk melakukan pendaftaran kunjungi website resmi kami </p>
+              <p style="margin-top: 0;"><a href="www.modena.com">www.modena.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</div>

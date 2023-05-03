@@ -1,0 +1,50 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar >
+          <ion-buttons slot="start" class="kembali">
+            <ion-icon (click)="goBack()" slot="start" name="arrow-back-outline"></ion-icon>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <img src="../../assets/images/logo-home.png" width="121" style="padding-top: 10px"/>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div style="padding: 10px">
+      <div class="row">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-tabs" (click)="goOpening()">Opening</ion-col>
+            <ion-col class="col-tabs-active">Chef <li></li></ion-col>
+            <ion-col class="col-tabs" (click)="goProgram()">Program</ion-col>
+            <ion-col class="col-tabs" (click)="goGallery()">Gallery</ion-col>
+            <ion-col class="col-tabs" (click)="goPromotion()">Promotion</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="ion-padding">
+      <h1 class="h1-header">Temui Chef kami</h1>
+      <p class="p-sub-header">Memandu anda melalui MODENA Culinaria, Chef kami yang sangat terampil akan menjamin anda untuk mendapatkan pengalaman memasak langsung terbaik. 
+        Dengan berbagai keahlian, kami akan membantu anda untuk mengeksplorasi banyak teknik dan cara memasak masakan
+      </p>
+      <ion-grid style="margin-top: 50px;">
+        <ion-row style="margin-bottom: 5px;">
+          <ion-col size="3" *ngFor="let itm of arrList; let j=index" (click)="detailChef(itm)">
+            <img src="{{itm.media}}" >
+            <p class="nama-chef">{{itm.chef_name}}</p>
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+
+    </div>
+    
+  </ion-content>
+  <div class="footer">
+    <app-footer></app-footer>
+    <div style="padding: 10px;background-color: #faa61a"></div>
+  </div>
+</div>
+

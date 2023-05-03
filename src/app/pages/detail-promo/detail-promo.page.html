@@ -1,0 +1,24 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="light">
+          <ion-buttons slot="start">
+            <ion-icon (click)="goBack()" slot="start" name="arrow-back-outline"></ion-icon>
+          </ion-buttons>
+          <ion-buttons slot="end">
+              <img src="../../assets/images/logo-home.jpg" width="121" style="padding-top: 10px"/>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <div>
+        <h3>{{arrList.class_name}}</h3>
+        <div style="margin:0 auto; width:100%; text-align:center">
+          <img src="{{arrList.media}}" />
+        </div>
+        <!-- <div style="font-size: 11px">From {{ arrList.pa_awal }} - {{ arrList.pa_akhir }}</div> -->
+        <h3 class="title-class" >{{arrList.title}}</h3>
+        <div style="margin-bottom: 10px;" [innerHtml] = "api.toHTML(arrList.description)"></div>
+      </div>
+  </ion-content>
+</div>

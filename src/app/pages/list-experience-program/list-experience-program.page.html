@@ -1,0 +1,51 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar >
+          <ion-buttons slot="start" class="kembali">
+            <ion-icon (click)="goBack()" slot="start" name="arrow-back-outline"></ion-icon>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <img src="../../assets/images/logo-home.png" width="121" style="padding-top: 10px"/>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div style="padding: 10px">
+      <div class="row">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-tabs" (click)="goOpening()">Opening</ion-col>
+            <ion-col class="col-tabs" (click)="goChef()">Chef </ion-col>
+            <ion-col class="col-tabs-active" >Program <li></li></ion-col>
+            <ion-col class="col-tabs" (click)="goGallery()">Gallery</ion-col>
+            <ion-col class="col-tabs" (click)="goPromotion()">Promotion</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="ion-padding">
+      <h1 class="h1-header">Upcoming Program</h1>
+      <div class="profile-image" *ngIf="!isShow" >
+        <img src="../../assets/images/Frame.png" width="121" style="padding-top: 10px"/>
+        <p color="modena" style="color: #95BCE9;">Data tidak ditemukan</p>
+      </div>
+      <ion-grid >
+        <ion-row *ngFor="let itm of arrList; let j=index" style="margin-bottom: 10px;">
+          <ion-col size="12" (click)="onDetails(itm)" style="padding: 0;">
+            <img src="{{itm.media}}" >
+            <div class="overlay overlay_2">
+              <div class="tgl-card">{{ itm.pa_akhir }}</div>
+              <div class="title-class" >{{itm.class_name}}</div>
+              <div class="more-card">More Info <ion-icon slot="end" name="arrow-forward-outline"></ion-icon></div>
+            </div> 
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+
+    </div>
+    
+  </ion-content>
+</div>
+

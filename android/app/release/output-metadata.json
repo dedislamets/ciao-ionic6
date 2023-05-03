@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "id.co.modena.ciaomodena",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 30025,
+      "versionName": "3.0.25",
+      "outputFile": "app-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

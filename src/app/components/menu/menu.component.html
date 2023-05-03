@@ -1,0 +1,74 @@
+<ion-menu contentId="main-content">
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Menu</ion-label>
+      </ion-list-header>
+      <ion-menu-toggle autoHide="false">
+        <ion-item [routerLink]="['/home']" color="modena">
+          <ion-icon slot="start" name="home-outline" color="dark"></ion-icon>
+          <ion-label>
+            Home
+          </ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/list-garansi']" color="modena">
+          <ion-icon slot="start" name="create-outline" color="dark"></ion-icon>
+          <ion-label>
+            Registration
+          </ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/list-experience']">
+          <ion-icon slot="start" name="body-outline" color="dark"></ion-icon>
+          <ion-label>
+            Experience
+          </ion-label>
+        </ion-item>
+        <ion-item (click)="news()">
+          <ion-icon slot="start" name="newspaper-outline" color="dark"></ion-icon>
+          <ion-label>
+            Latest News
+          </ion-label>
+        </ion-item>
+        <ion-item (click)="services()">
+          <ion-icon slot="start" name="tv-outline" color="dark"></ion-icon>
+          <ion-label>
+            Services
+          </ion-label>
+        </ion-item>
+        <ion-item [routerLink]="['/list-promo']">
+          <ion-icon slot="start" name="pricetags-outline" color="dark"></ion-icon>
+          <ion-label>
+            Promotions
+          </ion-label>
+        </ion-item>
+        <ion-item (click)="onlineshop()">
+          <ion-icon slot="start" name="basket-outline" color="dark"></ion-icon>
+          <ion-label>
+            Online Shopping
+          </ion-label>
+        </ion-item>
+        <ion-item (click)="survey()">
+          <ion-icon slot="start" name="thumbs-up-outline" color="dark"></ion-icon>
+          <ion-label>
+            Customer Survey
+          </ion-label>
+        </ion-item>
+        <ion-list-header *ngIf="show">
+          <ion-label>General</ion-label>
+        </ion-list-header>
+        <ion-item  *ngIf="show" [routerLink]="['/setting']" color="modena"  style="color: black">
+          <ion-icon slot="start" name="build-outline" color="dark"></ion-icon>
+          <ion-label>
+            Setting
+          </ion-label>
+        </ion-item>
+        <ion-item *ngIf="show" (click)="logout()" color="modena"  style="color: black">
+          <ion-icon name="log-out-outline" item-left color="dark" slot="start"></ion-icon>
+          <ion-label>
+            Logout
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>

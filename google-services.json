@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "1028513200033",
+    "firebase_url": "https://ciaomodena-328.firebaseio.com",
+    "project_id": "ciaomodena-328",
+    "storage_bucket": "ciaomodena-328.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028513200033:android:a320f7bd0b9fdbe5",
+        "android_client_info": {
+          "package_name": "id.co.modena.ciaomodena"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028513200033-3o4miamvg8lppfbdmtcr65i58qah9610.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.modena.ciaomodena",
+            "certificate_hash": "c6f281adc9e83fc541f5df3aa37e1fd9e590a6ef"
+          }
+        },
+        {
+          "client_id": "1028513200033-b6cnahihg3cpg8a9e993nv8sukm13j3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.modena.ciaomodena",
+            "certificate_hash": "600f13a81f2fe524c27df586216aea995cbf3d6e"
+          }
+        },
+        {
+          "client_id": "1028513200033-gunnho6357sfs2tck1niv2f40lj4pfec.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.modena.ciaomodena",
+            "certificate_hash": "62a6b7e24f1681e9163470bbb330f3267c295bb2"
+          }
+        },
+        {
+          "client_id": "1028513200033-m8g8ev1f6qeviuokvrnaov43svh7ibs4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-P-LYczIg4nOQyHZqWYxC2cEs5sQjibI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028513200033-321gj3mfb4j5mr376td5kfmmmgem1ka3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028513200033:android:7169286658470b90",
+        "android_client_info": {
+          "package_name": "id.tpush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028513200033-m8g8ev1f6qeviuokvrnaov43svh7ibs4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-P-LYczIg4nOQyHZqWYxC2cEs5sQjibI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028513200033-321gj3mfb4j5mr376td5kfmmmgem1ka3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

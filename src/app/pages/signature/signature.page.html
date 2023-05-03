@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Tanda Tangan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <signature-pad [options]="signaturePadOptions"  id="signatureCanvas"></signature-pad>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button expand="full" color="danger" (click)="drawCancel()">Batal</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="full" color="light" (click)="drawClear()">Kosongkan</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="full" color="secondary" (click)="drawComplete()">OK</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

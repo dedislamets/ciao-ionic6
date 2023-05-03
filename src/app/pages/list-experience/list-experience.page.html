@@ -1,0 +1,67 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+          <ion-buttons slot="start" class="kembali">
+            <ion-icon (click)="goBack()" slot="start" name="arrow-back-outline"></ion-icon>
+          </ion-buttons>
+          <!-- <p class="p-header">Getting the taste of experience</p>
+          <h1 class="h1-header">Modena Culinaria</h1>
+          <p class="p-sub-header">Join MODENA Culinaria essential courses, from introduction of kitchen tools to cooking methods, and from standard hygiene to understanding basic ingredients.</p> -->
+          <ion-buttons slot="end">
+              <img src="../../assets/images/logo-home.png" width="121" style="padding-top: 10px"/>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div style="padding: 10px">
+      <div class="row">
+        <!-- <img full src="../../assets/images/experience-banner.jpg" style="height: 100%;width: 100%;" />
+        <h1 class="banner-title ion-text-center">GET THE EXPERIENCE</h1>
+        <hr> -->
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-tabs-active">Opening <li></li></ion-col>
+            <ion-col class="col-tabs" (click)="goChef()">Chef</ion-col>
+            <ion-col class="col-tabs" (click)="goProgram()">Program</ion-col>
+            <ion-col class="col-tabs" (click)="goGallery()">Gallery</ion-col>
+            <ion-col class="col-tabs" (click)="goPromotion()">Promotion</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="ion-padding">
+      <p class="col-p" style="margin-top: 0;">MODENA Culinaria didirikan untuk memberi ruang bagi para pecinta kuliner untuk mewujudkan mimpinya. 
+        Kami percaya bahwa semua orang bisa memasak, karena itu kelas-kelas kami dirancang untuk berbagai tingkat keahlian, 
+        mulai dari kelas pemula tentang peralatan dan metode masak, hingga program lanjutan untuk praktik-praktik bisnis kuliner.</p>
+
+      <p class="col-p">Program-program kami diadakan di studio dapur profesional kami untuk mengakomodasi kebutuhan peserta. 
+        Dibimbing oleh pelatih-pelatih ahli kami, inilah saatnya anda membebaskan jiwa koki profesional anda.​ </p>
+    </div>
+    <!-- <div class="profile-image" *ngIf="!isShow" >
+      <ion-icon style="font-size: 5.2em;" name="document" color="modena"></ion-icon>
+      <p color="modena">Data tidak ditemukan</p>
+    </div> -->
+    <!-- <ion-grid>
+      <ion-row style="border-bottom: 1px solid darkgray; margin-bottom: 5px;">
+        <ion-col *ngFor="let itm of arrList; let j=index" size="12">
+          <img (click)="onDetails(itm)" src="{{itm.full_path}}" >
+          <div style="font-size: 13px; text-align: left;padding-top: 10px;">{{ itm.pa_akhir }} 
+          </div>
+          <h3 class="title-class" (click)="onDetails(itm)">{{itm.class_name}}</h3>
+      
+          <ion-button expand="block" color="warning" (click)="onDetails(itm)" style="width:100%;font-size: 11px;font-weight: 700;">
+              Baca Selengkapnya
+          </ion-button>
+        </ion-col>
+        <ion-col col-12 style="margin-bottom: 100px"></ion-col>
+      </ion-row>
+    </ion-grid> -->
+
+  </ion-content>
+  <div class="footer">
+    <app-footer></app-footer>
+    <div style="padding: 10px;background-color: #faa61a"></div>
+  </div>
+</div>
+

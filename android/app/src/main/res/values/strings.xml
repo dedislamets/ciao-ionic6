@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MODENA</string>
+    <string name="title_activity_main">MODENA</string>
+    <string name="package_name">id.co.modena.ciaomodena</string>
+    <string name="custom_url_scheme">id.co.modena.ciaomodena</string>
+    <string name="fb_app_id">3715282331893311</string>
+    <string name="fb_app_name">ciaomodena</string>
+</resources>

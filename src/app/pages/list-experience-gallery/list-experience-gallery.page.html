@@ -1,0 +1,46 @@
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar >
+          <ion-buttons slot="start" class="kembali">
+            <ion-icon (click)="goBack()" slot="start" name="arrow-back-outline"></ion-icon>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <img src="../../assets/images/logo-home.png" width="121" style="padding-top: 10px"/>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div style="padding: 10px">
+      <div class="row">
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-tabs" (click)="goOpening()">Opening</ion-col>
+            <ion-col class="col-tabs" (click)="goChef()">Chef </ion-col>
+            <ion-col class="col-tabs" (click)="goProgram()" >Program</ion-col>
+            <ion-col class="col-tabs-active" >Gallery <li></li></ion-col>
+            <ion-col class="col-tabs" (click)="goPromotion()">Promotion</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="ion-padding">
+      <h1 class="h1-header">Gallery</h1>
+      <ion-grid >
+        <ion-row>
+          <ion-col size="4" *ngFor="let itm of arrList; let j=index">
+            <img src="{{itm.media}}" >
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+
+    </div>
+    
+  </ion-content>
+  <div class="footer">
+    <app-footer></app-footer>
+    <div style="padding: 10px;background-color: #faa61a"></div>
+  </div>
+</div>
+

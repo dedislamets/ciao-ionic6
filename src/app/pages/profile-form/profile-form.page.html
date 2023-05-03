@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-title style="color:#fff;">Profile</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end"  (click)="closeModal()">
+      <span ion-text style=color:#fff>Cancel</span>
+    </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="padding: 16px;padding-top: 0">
+    <div class="row">
+      <h1 center class="banner-title">Profile Pengguna</h1>
+      <hr>
+      <!-- <img item-start src="../../assets/images/profile.png"  (click)="presentActionSheet()" class="thumbnail"/> -->
+    </div>
+
+      <div class="box Efek3">
+        <p style="color: gray;font-weight: bold;font-size: 17px;margin: 0;" class="line-clamp">{{ profile.name }}</p>
+        <p style="color: gray;text-align: justify;margin-top: 5px;" class="line-clamp-address">{{ profile.address }}</p>
+        <p class="line-clamp">Mobile : {{ profile.handphone == 'undefined' ? '-' : profile.handphone }}</p>
+        <p class="line-clamp-2">Email : {{ profile.email }}</p>
+        <input type="hidden" id="state_id" value="{{ profile.state_id }}|{{profile.region_id}}"/>
+      </div>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">{{label_nama}} *</ion-label>
+        <ion-input type="text" [(ngModel)]="nama" ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="stacked">Email *</ion-label>
+          <ion-input type="email" [(ngModel)]="email" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{label_alamat}} *</ion-label>
+        <ion-textarea [(ngModel)]="alamat_current" rows="4" cols="20"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{label_propinsi}} *</ion-label>
+        <ion-select [(ngModel)]="provinsi" interface="action-sheet" (ionChange)="onChangePropinsi(provinsi)">
+            <div *ngFor="let p of arr_provinsi">
+                <ion-select-option value="{{ p.propinsi_id }}">{{ p.propinsi }}</ion-select-option>	
+            </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{label_kota}} *</ion-label>
+        <ion-select [(ngModel)]="kota" interface="action-sheet">
+            <div *ngFor="let p of arr_kota">
+                <ion-select-option value="{{ p.kota_id }}">{{ p.kota }}</ion-select-option>	
+            </div>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{label_kode_pos}}</ion-label>
+        <ion-input type="number" [(ngModel)]="kode_pos" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{label_telepon}}</ion-label>
+        <ion-input type="number" [(ngModel)]="telepon" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">{{label_telepon_selular}}</ion-label>
+        <ion-input type="number" [(ngModel)]="hp" ></ion-input>
+      </ion-item>
+      <h3 style="font-size: 14px;padding: 0 17px;margin-bottom: 5px;">{{label_ubah_password}}</h3>
+      <ion-item>
+        <ion-label position="stacked">{{label_kosongkan_apabila_tidak_ada_perubahan}}</ion-label>
+        <ion-input [type]="passwordType" clearOnEdit="false" [(ngModel)]="password" (ionBlur)="ubah_password()"></ion-input>
+        <!-- <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)="showHide()"></ion-icon> -->
+      </ion-item>
+      <ion-item *ngIf="ubah">
+          <ion-label position="stacked">{{label_ulangi_ketikkan_password}}</ion-label>
+          <ion-input [type]="passwordType" clearOnEdit="false" [(ngModel)]="repeat_password" (ionBlur)="ubah_password()"></ion-input>
+          <!-- <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)="showHide()"></ion-icon> -->
+      </ion-item>
+      <div *ngIf="error_password_beda" style="color: red;padding-left: 15px;padding-top: 6px;font-size: 12px;">*{{label_error_password_beda}}</div>
+    </ion-list>
+    
+    
+    <ion-button icon-start expand="block" (click)="validator()" color="warning" style="font-size: 12px;color:black" >
+     Simpan
+    </ion-button> 
+
+  </div>
+</ion-content>
+
+
